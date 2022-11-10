@@ -25,6 +25,7 @@ def filter_json(target_dir):
                 shutil.copy(json_filename_path, temp_dir)
                 shutil.copy(target_dir + filename,  temp_dir)
          
+# construct master csv using all individual jsons in target folder
 def make_csv(target_dir):
 
     data_file = open('data_file.csv', 'w')
@@ -52,7 +53,7 @@ def make_csv(target_dir):
 
  
 
-
+# rename all files in target folder in contiguous, sequential order
 def rename_files(target_dir):
     temp_dir = id_generator()
     os.mkdir(temp_dir)
